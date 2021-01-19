@@ -1,0 +1,103 @@
+{% extends "landing/base.html" %}
+{% block content %}
+
+  <form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+ 
+<!--   <button type="submit" id ="buyButton">Purchase!</button>
+ -->
+</form>
+   <!--  {% for post in posts %}
+    <article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{ post.author }}</a>
+      <small class="text-muted">{{ post.date|date:"d F, Y" }}</small>
+    </div>
+    <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+    <p class="article-content">{{ post.content }}</p>
+  </div>
+</article>
+    {% endfor %} -->
+
+
+
+
+<div class="w3-padding-64 intro-container">
+  <div class="w3-row-padding">
+    <div class="w3-col l8 m6">
+      <h1 class="w3-jumbo title-text"><b>DataTrain</b></h1>
+      <h1 class="w3-xxxlarge highlight-text"><b>How can it help me?</b></h1>
+      <p class = "intro-text"><span class="w3-xlarge">We can make predictions based on your data!</span> At DataTrain, we use the latest in machine learning technology to make predictions based of your data, saving you money and increasing the efficiency of your buisiness. </p>
+      
+    </div>
+    <div class="w3-col l4 m6">
+      <img src="../../static/landing/spreadsheet.jpg" class="w3-image w3-right w3-hide-small" width="335" height="471">
+      <div class="w3-center w3-hide-large w3-hide-medium">
+        
+        <img src="/w3images/img_app.jpg" class="w3-image w3-margin-top" width="335" height="471">
+      </div>
+    </div>
+  </div>
+</div>
+​
+
+
+<div class="w3-padding-64 w3-center pricing-container">
+  <h1 class="w3-jumbo title-text"><b>Pricing</b></h1>
+  <p class="w3-large highlight-text">Choose a pricing plan that fits your needs.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half w3-section">
+      <ul class="w3-ul w3-card w3-hover-shadow pricing-inner-container">
+        <li class="pricing-type-container w3-xlarge w3-padding-32">One Time Usage</li>
+        <li class="w3-padding-16"><b>1</b> Usage</li>
+        <li class="w3-padding-16"><b>500</b> Epochs</li>
+        <li class="w3-padding-16"><b>Up to 10000</b> Records</li>
+        <li class="w3-padding-16"><b>5 day </b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-opacity">£20</h2>
+        </li>
+        <li class="pricing-type-container w3-padding-24">
+         <button type="submit" class="purchase-button w3-padding-large" id ="buyButton">Purchase!</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-half w3-section">
+      <ul class="w3-ul w3-card w3-hover-shadow pricing-inner-container" >
+        <li class="pricing-type-container w3-xlarge w3-padding-32">Subscription</li>
+        <li class="w3-padding-16"><b>Up to</b> 20 usages per month</li>
+        <li class="w3-padding-16"><b>1500</b> Epochs</li>
+        <li class="w3-padding-16"><b>Up to 15000</b> Records</li>
+        <li class="w3-padding-16"><b>7 day </b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-opacity">£200</h2>
+        </li>
+        <li class="pricing-type-container w3-padding-24">
+                <button type="submit" class= "purchase-button w3-padding-large" id ="buyButton">Purchase!</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <br>
+</div>
+
+ 
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+ 
+
+{% endblock content %}

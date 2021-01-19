@@ -1,0 +1,29 @@
+{% extends "landing/base.html" %}
+{% block content %}
+   <h1 class="w3-jumbo title-text"><b>Thankyou for purchasing!</b></h1>
+         <h1 class="w3-xxxlarge highlight-text"><b>Please upload your data</b></h1>
+
+<div class="w3-padding-64 upload-form-container">
+  <div class="w3-row-padding">
+    <div class="w3-col l8 m6">
+   
+      <p class = "title-text"><span class="w3-xlarge">You are nearly done!</span> All there is left to do is simply upload your csv data and chose the title of the column you wish to train for. </p>
+      
+    <form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <label class = "title-text">Please choose a file to upload. Please note: The file MUST be a valid, labelled CSV file.</label>
+  <input type="file" name="file">
+    <label>Column to train for</label>
+  <input type="text" name="colName">
+  <button class="purchase-button" type="submit" id ="buyButton1">Process Data!</button>
+
+    <label class = "title-text">Analyticsv does not store any data. As such, we are unable to provide you with your trained data at a later date. Please ensure you have sucessfully downlaoded your trained data before leaving this page.</label>
+
+    </div>
+  
+  </div>
+</div>
+​
+
+</form>
+{% endblock content %}
